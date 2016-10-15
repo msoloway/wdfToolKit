@@ -1,0 +1,569 @@
+/*General Styling*/
+ 
+/* To make font-size accessible ====================================================== */
+        /*
+          Bootstrap accessibility (LESS)
+          http://stackoverflow.com/questions/12999267/why-does-twitter-bootstrap-use-pixels-for-font-size
+          http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
+        */
+        /*
+          https://github.com/twbs/bootstrap/blob/v3.3.0/less/scaffolding.less#L20
+          https://github.com/twbs/bootstrap/blob/v3.3.0/less/scaffolding.less#L23
+        */
+        /*// Body reset*/
+        html {
+          font-size: 75%;  /* Was: 10px; ou-specific */
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        body {
+        	/*making font responsive*/
+		        font-family: @font-family-base;
+		        font-size: @font-size-base;
+		        line-height: @line-height-base;
+		        color: @text-color;
+		        background-color: @body-bg;
+		        color: #fff !important;
+	       /* Background color*/
+				background-color: #52d3aa;
+				/* IE9, iOS 3.2+ */
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+				background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa));
+				/* Android 2.3 */
+				background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
+				/* IE10+ */
+				background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+				background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
+				position: relative;
+				color: rgba(255, 255, 255, 0.7);
+        }
+        /* ====================================================== */
+        /* https://github.com/twbs/bootstrap/blob/v3.3.0/less/variables.less#L51
+        */
+        @font-size-base:          100%;  /* Was: 14px; ou-specific */
+        /* ====================================================== */
+        /* https://github.com/IET-OU/apd/blob/master/sites/all/themes/apd/css/bootstrap.min.css
+        */
+ 
+        /*!
+         * Bootstrap v3.2.0 (http://getbootstrap.com)
+ ...*/
+
+ @media (max-width: 1011px) {
+		h2 {
+			font-size: 2em !important;
+		}
+		h3.overview {
+			font-size: 1.5em !important;
+		}
+		p {
+			font-size: 1em !important;
+		}
+		ol, ul {
+			font-size: 1em !important;
+		}
+		ol li p, ul li p, ol li ul, ul li ol {
+			font-size: .85em !important;
+		}
+		nav #navbar-collapse-1 a {
+			font-size: 1em !important;
+		}
+		nav #navbar-collapse-1 ul.dropdown-menu {
+			color: #fff !important;
+			font-size: 1em !important;
+		}
+		.navbar-fixed-top2 {
+			font-size: .95em !important;
+			top: 4.5em !important;
+		}
+ }
+
+@media (max-width: 993px) {
+ 	.margin-left_6em_small {
+			margin-left: 6em;
+		}
+	.margin-left_4em_small {
+			margin-left: 4em;
+		}
+	.margin-top_2em_small {
+		margin-top: 2em;
+	}	
+ }
+@media (max-width: 807px) {
+	  	.navbar-fixed-top2 {
+		  top: 4.8em !important;
+		}
+  }
+@media (max-width: 768px) {
+	  	.navbar-fixed-top2 {
+		  top: 4.5em !important;
+		}
+		.navbar-fixed-top2 ul {
+			padding: 0 1em !important;
+		}
+		.navbar-fixed-top2 ul li {
+		  display: inline-block !important;
+		}
+		section#anchor1:before, section#anchor2:before, section#anchor3:before { 
+			display: block;
+			content: "";
+			height: 11em !important;
+			margin-top: -11em !important;
+		}
+  }
+
+/*Text */
+		@font-face {
+			font-family: 'icomoon';
+			src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+			src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+			font-weight: normal;
+			font-style: normal;
+		}
+		a {
+			text-decoration: none !important;
+		}
+		a:hover, a img:hover {
+			opacity: .7 !important;
+			transition: 0.5s ease !important;
+		}
+		h1, h2, h3, h4, h5, h6 {
+		  color: #4d4d4d;
+		  font-family: "Source Sans Pro", Arial, sans-serif;
+		  font-weight: 400;
+		  margin: 2em 0 2em 0;
+		  text-transform: uppercase;
+		}
+		h2 {
+			font-size: 2.5em;
+			letter-spacing: 2px;
+		}
+		p {
+			font-size: 1.25em;
+		}
+		ol, ul {
+			margin: .5em 0 0 2em;
+			font-size: 1.25em;
+		}
+		ol li p, ul li p, ol li ul, ul li ol, ul li ul {
+			font-size: 1em !important;
+		}
+		.bold {
+			font-weight: bold;
+		}
+		.lowercase {
+			text-transform: none !important;
+		}
+		.margin-top_halfem {
+			margin-top: .5em;
+		}
+		.margin-top_2em {
+			margin-top: 2em;
+		}
+		.margin-top_-1em {
+			margin-top: -1em;
+		}
+		.margin-top_-2em {
+			margin-top: -2em;
+		}
+		.margin-bottom_quarterem {
+			margin-bottom: .25em;
+		}
+		.margin-bottom_halfem {
+			margin-bottom: .5em;
+		}
+		.margin-bottom_1em {
+			margin-bottom: 1em;
+		}
+		.margin-bottom_2em {
+			margin-bottom: 2em;
+		}
+		.margin-bottom_4em {
+			margin-bottom: 4em;
+		}
+		.margin-left_2em {
+			margin-left: 2em;
+		}
+		.margin-left_9em {
+			margin-left: 9em;
+		}
+		.remove-margin {
+			margin-top: -2em;
+		}
+		.padding-left-right_1em {
+			padding: 0 1em !important;
+		}
+		section#anchor1:before, section#anchor2:before, section#anchor3:before { 
+			display: block;
+			content: "";
+			height: 9em;
+			margin-top: -9em;
+		}
+
+/*Nav*/
+		.navbar-default {
+			padding: .5em 0;
+		}
+		.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover  {
+			background-color: transparent;
+		}
+		.navbar .active {
+			font-weight: 600;
+		}
+		.nav1, ul.dropdown-menu {
+			color: #fff !important;
+			background-color: #44a5d9 !important;
+		}
+		.nav2 {
+			color: #fff !important;
+			background-color: #50beef !important;
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+		.nav2 .active a:before, .nav1 .active a:before {
+		    content: "";
+		    position: absolute;
+		    width: 50%;
+		    height: 1px;
+		    bottom: .75em;
+		    left: 25%;
+		    border-bottom: 2px solid #fff;
+		}
+		ul.dropdown-menu {
+			max-width: 20em !important;
+		}
+		ul.dropdown-menu li a:hover, li.dropdown .open, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+			background-color: transparent;
+		}
+
+		nav a {
+			color: #fff !important;
+		}
+		nav #navbar-collapse-1 a {
+			font-size: .75em;
+		}
+		nav #navbar-collapse-1 ul.dropdown-menu {
+			color: #fff !important;
+			font-size: .75em;
+		}
+		.navbar-brand {
+			margin: -1em 0 0 0;
+		}
+		img.brand-white {
+			display: inline-block;
+			z-index: -1;
+		}
+		.brand-style {
+			font-size: .7em !important;
+			font-weight: normal !important;
+			margin: -2.5em 0 0 0 !important;
+			z-index: 1;
+		}
+		.brand-line2 {
+			z-index: 1;
+			padding: 0 0 0 4em;
+			font-size: .65em;
+			margin-top: -.25em;
+		}
+		.brand-line3 {
+			z-index: 1;
+			padding: 0 0 0 4em;
+			margin-top: -.25em;
+		}
+		.navbar-default .navbar-toggle .icon-bar {
+		    background-color: #fff;
+		}
+	/*Second Navbar Fixed-Top*/
+		.navbar-fixed-top2 {
+		  position: fixed;
+		  right: 0;
+		  left: 0;
+		  z-index: 1020;
+		  font-size: .75em;
+		}
+		@media (min-width: 768px) {
+		  .navbar-fixed-top2 {
+		    border-radius: 0;
+		  }
+		}
+		.navbar-fixed-top2 {
+		  top: 5.5em;
+		  border-width: 0 0 1px 0;
+		}
+
+/*Footer*/
+		footer {
+			color: #fff !important;
+			padding: 3em 0;
+			border-top: 1px solid #fff;
+		}
+		footer p {
+			color: #fff !important;
+		}
+		footer a {
+			color: #fff !important;
+			font-weight: bold !important;
+		}
+
+/*Main*/
+		main {
+			padding: 15em 0 0 0;
+		}
+		main a {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+		.move-down {
+			padding-top: 2em;
+		}		
+		.move-up {
+			padding-top: -2em;
+		}
+		.hover-effect:hover {
+			opacity: .7 !important;
+			transition: 0.5s ease !important;
+		}
+
+
+/*Sections*/
+	/*1*/
+		.section1 {
+			color: #fff !important;
+			position: relative;
+			color: rgba(255, 255, 255, 0.7);
+			padding: 0 0 3em 0;
+			margin: -5em 0 0 0;
+		}
+		.section1 a {
+			color: #fff;
+			font-weight: 500;
+		}
+		
+	/*2*/
+		.section2 {
+			background: #fff !important;
+			color: #4d4d4d !important;
+			padding: 0 0 3em 0;
+		}
+		.section2 a {
+			font-weight: 600;
+		}
+		.section2 h2 {
+			margin: -.5em 0 1em 0;
+			line-height: 1em;
+		}
+		.green-background {
+			background-color: #91bf6e;
+			padding: .5em;
+			color: #fff;
+			font-weight: 200 !important; 
+		}
+		.green-background a {
+			color: #fff !important;
+			text-transform: uppercase;
+			font-weight: normal !important;
+			font-size: 1.25em;
+		}
+		
+
+	/*If/Then*/
+		.lightBlueBorder-left {
+			border-left: 2px solid #88d3df;
+		}
+		.lightBlue_background_divider {
+			background: #1b88bf;
+			color: #fff !important; 
+			padding: 0 3em;
+			text-align: center;
+			margin: 0;
+		}
+		.lightBlue_background_divider h2 {
+			padding: 0 !important;
+			text-align: left !important;
+			margin: .25em !important;
+			text-indent: -.6em;
+		}
+		div.lightBlue_background_divider h2, div.lightBlue_background_divider h2 em {
+			color: #fff !important;
+		}
+		h2.ifThis, h3.ifThis {
+			margin: 1.5em 0 1em 0;
+		}
+		h2.lighterBlue_background_then, h3.lighterBlue_background_then{
+			background: #75ceea;
+			color: #fff; 
+			padding: .5em;
+			margin: 1em 0;
+			text-align: center;
+		}
+		h2 small {
+			color: #fff !important;
+		}
+		h3.green-background {
+			background-color: #91bf6e;
+			padding: .5em;
+			color: #fff;
+			font-weight: normal !important; 
+			text-transform: none !important;
+		}
+		.no-gutter > [class*='col-'] {
+		    padding-right:0;
+		    padding-left:0;
+		}
+
+
+/*Worksheets and Icon Pages*/
+		.flex-container /*centered content*/ {
+			margin: 0 0 0 0;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+
+			-ms-flex-direction: row;
+			-moz-flex-direction: row;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+
+			-ms-flex-wrap: wrap;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+			-ms-justify-content: center;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+
+			-ms-align-items: flex-start;
+			-moz-align-items: flex-start;
+			-webkit-align-items: flex-start;
+			align-items: flex-start;
+		}
+		.flex-container-left /*space between content*/ {
+			margin: 0 0 0 0;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+
+			-ms-flex-direction: row;
+			-moz-flex-direction: row;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+
+			-ms-flex-wrap: wrap;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+			-ms-justify-content: flex-start;
+			-moz-justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+			justify-content: flex-start;
+
+			-ms-align-items: flex-start;
+			-moz-align-items: flex-start;
+			-webkit-align-items: flex-start;
+			align-items: flex-start;
+		}
+
+
+
+/*Toggling collapsing sections*/
+		.toggle-section h2 {
+		  margin: 0 0 30px 0;
+		  font-size: 50px;
+		  font-weight: 300;
+		  color: #fff !important;
+		  text-transform: uppercase;
+		  position: relative;
+		  display: block;
+		  margin-bottom: 20px;
+		  line-height: 1.5;
+		  text-decoration: none;
+		  -webkit-transition: 0.3s;
+		  -o-transition: 0.3s;
+		  transition: 0.3s;
+		  border-top: 1px solid #fff;
+		}
+		#display_advance0, #display_advance1, #display_advance1-1, #display_advance1-2, #display_advance1-3, #display_advance1-4, #display_advance2, #display_advance2-1, #display_advance2-2, #display_advance2-3, #display_advance2-4, #display_advance2-5, #display_advance2-6, #display_advance2-7, #display_advance2-8, #display_advance2-9, #display_advance2-10, #display_advance3, #display_advance4 {
+			display: none;
+		}
+		.show-display {
+			display: block !important;
+			background-color: #fff !important;
+			color: #4d4d4d;
+			padding: 3em 0 ;
+		}
+		.white-divider {
+			border-bottom: 1px solid #fff;
+			content: "";
+		}
+		h2 i.fa.fa-plus, h2 i.fa.fa-minus {
+			color: #fff;
+		}
+		.iconSpacing1 {
+			display: inline-block;
+			max-width: 145px;
+		}
+		.iconSpacing2 {
+			display: inline-block;
+			max-width: 30em;
+			margin: 0 0 0 2em;
+		}
+
+
+/*References*/
+		p.references {
+			padding-left: 2em;
+		    text-indent:-2em;
+		}
+		.dont-break-out {
+		  /* These are technically the same, but use both */
+		  overflow-wrap: break-word;
+		  word-wrap: break-word;
+		  -ms-word-break: break-all;
+		  /* This is the dangerous one in WebKit, as it breaks things wherever */
+		  word-break: break-all;
+		  /* Instead use this non-standard one: */
+		  word-break: break-word;
+		  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+		  -ms-hyphens: auto;
+		  -moz-hyphens: auto;
+		  -webkit-hyphens: auto;
+		  hyphens: auto;
+		}
+
+
+/*Contact Us and Sitemap */
+		.download, .download a, .sitemap, .sitemap a, .sitemap p, .contact, .contact a, .contact h2, .contact p {
+			color: #fff !important;
+		}
+		.sitemap, .contact {
+			color: #fff !important;
+			font-size: .85em !important;
+		}
+		.contact h2 {
+			border-bottom: 2px solid #fff;
+		}
+		.contact div {
+			max-width: 20em !important;
+			margin-right: 5em !important;
+		}
+		.contact h2:after {
+			padding-top: -1em !important;
+		}
+		.sitemap a {
+			text-transform: none !important;
+		}
+		.sitemap ol li {
+			margin-top: 1.5em;
+		}
+		.sitemap ol li ul li {
+			margin-top: 0em;
+		}
