@@ -165,6 +165,9 @@
 		.margin-top_-2em {
 			margin-top: -2em;
 		}
+		.margin-top_-3em {
+			margin-top: -3em;
+		}
 		.margin-bottom_quarterem {
 			margin-bottom: .25em;
 		}
@@ -303,6 +306,9 @@
 			color: #fff !important;
 			font-weight: bold !important;
 		}
+		footer .text-muted, footer .text-muted a {
+			color: #ede !important;
+		}
 
 /*Main*/
 		main {
@@ -337,6 +343,74 @@
 		.section1 a {
 			color: #fff;
 			font-weight: 500;
+		}
+		.scroll a {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			z-index: 2;
+			display: inline-block;
+			-webkit-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+			color: #fff;
+			font : normal 400 20px/1 'Josefin Sans', sans-serif;
+			letter-spacing: .1em;
+			text-decoration: none;
+			transition: opacity .3s;
+		}
+		.scroll a:hover {
+			opacity: .5;
+		}
+
+		#scroll-down {
+			margin-top: 13em;
+		}
+		#scroll-down a, .to-top-footer a {
+			/*padding-top: 60px;*/
+			padding-top: 5em;
+			font-weight: lighter;
+		}
+		#scroll-down a span {
+			position: absolute;
+			top: 2em;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			margin-left: -12px;
+			border-left: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			box-sizing: border-box;
+		}
+		.to-top {
+			margin-top: 2em;
+		}
+		.to-top a span {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			margin-left: -12px;
+			border-left: 1px solid;
+			border-bottom: 1px solid;
+			-webkit-transform: rotate(135deg);
+			transform: rotate(135deg);
+			box-sizing: border-box;
+		}
+		.to-top-footer a span {
+			position: absolute;
+			top: -1.5em;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			margin-left: -12px;
+			border-left: 1px solid;
+			border-bottom: 1px solid;
+			-webkit-transform: rotate(135deg);
+			transform: rotate(135deg);
+			box-sizing: border-box;
 		}
 		
 	/*2*/
@@ -541,7 +615,7 @@
 
 
 /*Contact Us and Sitemap */
-		.download, .download a, .sitemap, .sitemap a, .sitemap p, .contact, .contact a, .contact h2, .contact p {
+		.download, .download a, .download h3, .sitemap, .sitemap a, .sitemap p, .contact, .contact a, .contact h2, .contact p {
 			color: #fff !important;
 		}
 		.sitemap, .contact {
@@ -549,14 +623,17 @@
 			font-size: .85em !important;
 		}
 		.contact h2 {
-			border-bottom: 2px solid #fff;
+			border-bottom: 2px solid #fff !important;
+		}
+		.contact h2.push-down {
+			padding-top: 1em !important;
 		}
 		.contact div {
 			max-width: 20em !important;
 			margin-right: 5em !important;
 		}
-		.contact h2:after {
-			padding-top: -1em !important;
+		.contact h2 {
+			margin-bottom: .5em !important;
 		}
 		.sitemap a {
 			text-transform: none !important;

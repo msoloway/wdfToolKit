@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+// http://codepen.io/nxworld/pen/OyRrGy
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+
+
+
+
+
 $('#click_advance0').click(function(){
   $('#display_advance0').toggle('500');
   $('#display_advance0').toggleClass("show-display");
