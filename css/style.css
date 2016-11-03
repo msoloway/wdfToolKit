@@ -48,6 +48,43 @@
          * Bootstrap v3.2.0 (http://getbootstrap.com)
  ...*/
 
+
+
+ /*...To fix SVG images in IE and Edge, per https://gist.github.com/larrybotha/7881691
+		 * 
+		 * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+		 *
+		 * [1] IE9
+		 * [2] IE10+
+		 */
+		/* 1 */
+		.ie9 img[src$=".svg"] {
+		  width: 100%; 
+		}
+		img.img-sub [src$=".svg"] 
+			  {width: 100% !important;
+		  }
+		/* 2 */
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		  img[src$=".svg"] {
+		    width: 100%; 
+		  }
+		  img.img-sub [src$=".svg"] 
+			  {width: 100% !important;
+		  }
+		}
+/*...*/
+
+
+
+
+/*Fix image size problem in IE and Edge, per https://github.com/aFarkas/lazysizes/issues/163*/
+		/*.img-responsive {
+		    width: 100%;
+		}*/
+/*...*/
+
+
  @media (max-width: 1011px) {
 		h2 {
 			font-size: 2em !important;
@@ -340,6 +377,21 @@
 		}
 
 
+/*Previous/Next Section*/
+		#anchor300 {
+			padding: 1em 0;
+		}
+		ul.previous-next a {
+			
+		}
+		ul.previous-next li {
+			background-color: #fff;
+			padding: .5em 1em;
+			min-width: 15em;
+			margin: 1em 3em;
+		}
+
+
 /*Sections*/
 	/*1*/
 		.section1 {
@@ -489,10 +541,10 @@
 			font-weight: normal !important; 
 			text-transform: none !important;
 		}
-		.no-gutter > [class*='col-'] {
+		/*.no-gutter > [class*='col-'] {
 		    padding-right:0;
 		    padding-left:0;
-		}
+		}*/
 
 
 /*Worksheets and Icon Pages*/
@@ -554,6 +606,15 @@
 			-webkit-align-items: flex-start;
 			align-items: flex-start;
 		}
+		.stop {
+			background-color: #f7931e;
+			color: #fff;
+			padding: .5em;
+			font-size: 1.25em;
+		}
+		.stop a {
+			color: #fff;
+		}
 
 
 
@@ -605,6 +666,9 @@
 		p.references {
 			padding-left: 2em;
 		    text-indent:-2em;
+		}
+		p.references a {
+			text-transform: none !important;
 		}
 		.dont-break-out {
 		  /* These are technically the same, but use both */
