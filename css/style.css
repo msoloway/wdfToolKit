@@ -116,7 +116,7 @@
 
 @media (max-width: 993px) {
  	.margin-left_6em_small {
-			margin-left: 6em;
+			margin-left: 5em;
 		}
 	.margin-left_4em_small {
 			margin-left: 4em;
@@ -225,6 +225,9 @@
 		}
 		.margin-left_9em {
 			margin-left: 9em;
+		}
+		.margin-left_-3em {
+			margin-left: -3em !important;
 		}
 		.remove-margin {
 			margin-top: -2em;
@@ -609,7 +612,7 @@
 		.stop {
 			background-color: #f7931e;
 			color: #fff;
-			padding: .5em;
+			padding: .25em;
 			font-size: 1.25em;
 		}
 		.stop a {
